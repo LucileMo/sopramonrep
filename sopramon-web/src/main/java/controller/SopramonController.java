@@ -16,44 +16,30 @@ import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOCoup;
 import sopramon.model.Combat;
 import sopramon.model.Coup;
+import sopramon.model.Sopramon;
 
 
 @Controller
-public class CombatController {
+public class SopramonController {
 
 	
-	// LISTER LES COMBATS
+	// LISTER LES SOPRAMON
 	
-	@Autowired 
-	private IDAOCombat daoCombat;
-	
-	@GetMapping({ "/combat" })
-	public String listecombat(Model model) {
-	
-	 List<Combat> myCombats = new ArrayList<Combat>();
-	 myCombats = daoCombat.findAll();
-	 	
-	 model.addAttribute("combats", daoCombat.findAll());
-	
-	return "combat";
-	
-	}
 
-	// HISTORIQUE DES COUPS
-	
 	@Autowired 
-	private IDAOCoup daoCoup;
+	private IDAOCombat daoSopramon;
 	
-	@GetMapping({ "/coup" })
-	public String listecoup(Model model) {
+	@GetMapping({ "/Espace-admin" })
+	public String listesopramon(Model model) {
 	
-	 List<Coup> myCoups = new ArrayList<Coup>();
-	 myCoups = daoCoup.findAll();
+	 List<Sopramon> mySopramons = new ArrayList<Sopramon>();
+	 mySopramons = daoSopramon.findAll();
 	 	
-	 model.addAttribute("coups", daoCoup.findAll());
+	 model.addAttribute("sopramons", daoSopramon.findAll());
 	
-	 return "coup";
+	return "Espace-admin";
 	
 	}
 	
 }
+
