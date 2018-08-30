@@ -23,7 +23,7 @@ import nz.net.ultraq.thymeleaf.LayoutDialect;
 public class WebConfig implements WebMvcConfigurer {
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
 registry.addResourceHandler("/css/**").addResourceLocations("/css/");
-registry.addResourceHandler("/images/**").addResourceLocations("/images/");
+registry.addResourceHandler("/pictures/**").addResourceLocations("/pictures/");
 }
 
 
