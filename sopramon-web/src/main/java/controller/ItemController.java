@@ -19,9 +19,7 @@ import sopramon.model.Capacite;
 public class ItemController {
 
 	
-	
 	// LISTER LES ITEMS
-	
 
 	@Autowired 
 	private IDAOItem daoItem;
@@ -32,12 +30,12 @@ public class ItemController {
 	 List<Item> myItems = new ArrayList<Item>();
 	 myItems = daoItem.findAll();
 	 	
-	 model.addAttribute("produits", daoItem.findAll());
+	 model.addAttribute("items", daoItem.findAll());
 	
-	return "produit";
+	 return "item";
 	
 	}
-
+/*
 	// AJOUTER ITEM
 	
 	// Partie 1 GET POUR RECUPERER FORMULAIRE
@@ -49,9 +47,9 @@ public class ItemController {
 		model.addAttribute("items", daoItem.findAll());
 	
 		return "itemform";
-		
+
 		}
-	
+
 	// Partie 2 POST POUR ENVOYER DONNES
 		
 		
@@ -110,7 +108,7 @@ public class ItemController {
 		return "redirect:/espaceAdmin";
 	
 		}
-		
+*/		
 }
 
 
