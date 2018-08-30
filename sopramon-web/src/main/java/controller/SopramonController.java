@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import sopramon.IDAO.IDAOCombat;
-import sopramon.IDAO.IDAOCoup;
-import sopramon.model.Combat;
-import sopramon.model.Coup;
+import sopramon.IDAO.IDAOSopramon;
 import sopramon.model.Sopramon;
+
 
 
 @Controller
@@ -27,7 +25,7 @@ public class SopramonController {
 	
 
 	@Autowired 
-	private IDAOCombat daoSopramon;
+	private IDAOSopramon daoSopramon;
 	
 	@GetMapping({ "/Espace-admin" })
 	public String listesopramon(Model model) {
