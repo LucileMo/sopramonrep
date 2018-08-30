@@ -18,11 +18,6 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 	public List <Item> findByNomContaining(String string);
 	
 	
-	
-	
-	
-	
-	
 	// public Utilisateur findByUsernameAndPassword (String username, String
 	// password);
 
@@ -32,9 +27,9 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 
 	// R READ
 
-//	public List<Item> findAll();
+	public List<Item> findAll();
 
-//	public Item findById(int id);
+	public Item findById(int id);
 	
 //	@Query
 //	public Item findUnItem(@Param("Hache") String libelle);
