@@ -29,7 +29,7 @@ public class SopramonController {
 	@Autowired 
 	private IDAOCombat daoSopramon;
 	
-	@GetMapping({ "/sopramon" })
+	@GetMapping({ "/Espace-admin" })
 	public String listesopramon(Model model) {
 	
 	 List<Sopramon> mySopramons = new ArrayList<Sopramon>();
@@ -37,7 +37,7 @@ public class SopramonController {
 	 	
 	 model.addAttribute("sopramons", daoSopramon.findAll());
 	
-	return "sopramon";
+	return "Espace-admin";
 	
 	}
 	

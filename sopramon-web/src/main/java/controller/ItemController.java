@@ -3,7 +3,7 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +16,7 @@ import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOItem;
 import sopramon.model.Capacite;
 import sopramon.model.Combat;
+import sopramon.model.Item;
 
 @Controller
 public class ItemController {
@@ -26,7 +27,7 @@ public class ItemController {
 	@Autowired 
 	private IDAOItem daoItem;
 	
-	@GetMapping({ "/item" })
+	@GetMapping({ "/Espace-sopramon" })
 	public String listeitem(Model model) {
 	
 	 List<Item> myItems = new ArrayList<Item>();
@@ -34,7 +35,7 @@ public class ItemController {
 	 	
 	 model.addAttribute("items", daoItem.findAll());
 	
-	 return "sopramon";
+	 return "Espace-sopramon";
 	
 	}
 	
