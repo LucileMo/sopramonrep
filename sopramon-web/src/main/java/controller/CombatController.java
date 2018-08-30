@@ -27,7 +27,7 @@ public class CombatController {
 	@Autowired 
 	private IDAOCombat daoCombat;
 	
-	@GetMapping({ "/combat" })
+	@GetMapping({ "/Combat" })
 	public String listecombat(Model model) {
 	
 	 List<Combat> myCombats = new ArrayList<Combat>();
@@ -35,7 +35,7 @@ public class CombatController {
 	 	
 	 model.addAttribute("combats", daoCombat.findAll());
 	
-	return "combat";
+	return "Combat";
 	
 	}
 

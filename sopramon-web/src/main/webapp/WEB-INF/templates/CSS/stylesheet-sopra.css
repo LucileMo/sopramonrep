@@ -9,7 +9,7 @@ body {
 }
 .sopra
 {
-	background-image:url(pictures/INSERT.png);
+	background-image:url("pictures/INSERT.png");
 position : absolute;
 top : 20px;
 	left: 90px;
@@ -20,7 +20,7 @@ top : 20px;
 
 .image-donjon
 {
-background-image:url(pictures/donjon.png);
+background-image:url("pictures/donjon.png");
 position : absolute;
 top : -10px;
 	left: 700px;
