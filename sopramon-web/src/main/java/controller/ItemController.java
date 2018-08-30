@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOItem;
 import sopramon.model.Capacite;
+import sopramon.model.Combat;
 
 @Controller
 public class ItemController {
@@ -35,6 +37,7 @@ public class ItemController {
 	 return "item";
 	
 	}
+	
 /*
 	// AJOUTER ITEM
 	

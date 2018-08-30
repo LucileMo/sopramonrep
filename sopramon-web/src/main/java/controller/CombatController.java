@@ -31,8 +31,8 @@ public class CombatController {
 	@GetMapping({ "/combat" })
 	public String listecombat(Model model) {
 	
-	 List<Item> myCombats = new ArrayList<Combat>();
-	 myCombats = daoCoup.findAll();
+	 List<Combat> myCombats = new ArrayList<Combat>();
+	 myCombats = daoCombat.findAll();
 	 	
 	 model.addAttribute("combats", daoCombat.findAll());
 	
@@ -48,7 +48,7 @@ public class CombatController {
 	@GetMapping({ "/coup" })
 	public String listecoup(Model model) {
 	
-	 List<Item> myCoups =new ArrayList<Coup>();
+	 List<Coup> myCoups = new ArrayList<Coup>();
 	 myCoups = daoCoup.findAll();
 	 	
 	 model.addAttribute("coups", daoCoup.findAll());
