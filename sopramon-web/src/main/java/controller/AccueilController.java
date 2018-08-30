@@ -12,7 +12,7 @@ public class AccueilController {
 	@GetMapping(value="/Accueil")
 	public String home(@RequestParam(defaultValue="there") String username, Model model) {
 		model.addAttribute("utilisateur", username);
-		return "home";
+		return "Accueil";
 	}
 
 
