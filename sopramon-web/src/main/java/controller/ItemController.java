@@ -34,7 +34,7 @@ public class ItemController {
 	 	
 	 model.addAttribute("items", daoItem.findAll());
 	
-	 return "item";
+	 return "sopramon";
 	
 	}
 	
