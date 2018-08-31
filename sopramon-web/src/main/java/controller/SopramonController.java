@@ -30,15 +30,13 @@ public class SopramonController {
 	
 	@GetMapping({ "/Espace-admin" })
 	public String listesopramon(Model model) {
-	
-	 List<Sopramon> mySopramons = new ArrayList<Sopramon>();
-	 mySopramons = daoSopramon.findAll();
-	 	
-	 model.addAttribute("sopramons", daoSopramon.findAll());
-	
+		model.addAttribute("sopramons", daoSopramon.findAll());
 	return "Espace-admin";
 	
 	}
+	
+
+
 	
 }
 
