@@ -32,6 +32,7 @@
 			<artifactId>sopramon-data-jpa</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
 			
 		<dependency>
 			<groupId>org.apache.commons</groupId>
