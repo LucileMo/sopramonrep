@@ -65,9 +65,12 @@
 			
 						
 					
-					<a th:href="@{moditems(id=${ item.id })}" class="btn btn-primary">Modifier</a>	
+					<a th:href="@{/moditems(id=${ item.id })}" class="btn btn-primary">Modifier</a>	
 					
-					<a th:href="@{deleteitems(id=${ item.id })}" class="btn btn-danger">Supprimer</a>	
+					<a th:href="@{/deleteitems(id=${ item.id })}" class="btn btn-danger">Supprimer</a>	
+    
+
+    
     
 				</td>
 				

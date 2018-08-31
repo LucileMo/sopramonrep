@@ -24,19 +24,19 @@ public class ItemController {
 	
 	// LISTER LES ITEMS
 
-	@Autowired 
-	private IDAOItem daoItem;
+		@Autowired 
+		private IDAOItem daoItem;
 	
-
-	@GetMapping({ "/listitems" })
-	 
-	 public String listeitem(Model model) {
-	 	
-	 model.addAttribute("items", daoItem.findAll());
-	
-	 return "Espace-sopramon";
-	
-	}
+		
+		@GetMapping({ "/listitems" })
+		 
+		 public String listeitem(Model model) {
+		 	
+		 model.addAttribute("items", daoItem.findAll());
+		
+		 return "Espace-sopramon";
+		
+		}
 	
 
 	// AJOUTER ITEM
@@ -82,21 +82,35 @@ public class ItemController {
 	
 		public String editerItem(@RequestParam int id, Model model) {
 	
-		model.addAttribute("item",  daoItem.findById(id).getId());
+		model.addAttribute("item",  daoItem.findById(id));
 	
 		return "itemform";
 		
 		}
-	
-	@PostMapping({ "/moditems" })
-	
-		public String editerItem(@ModelAttribute Item item) {
 
-		daoItem.save(item);
+		@PostMapping({ "/moditems" })
+	
+		public String editerItem(@RequestParam String nom, @RequestParam float prix, @RequestParam int attaque, 
+				@RequestParam int pointsdevie, @RequestParam int defense, @RequestParam int esquive, @RequestParam int vitesse) {							{
+		
+		Item myItem = new Item();
+		Capacite myCapacite = new Capacite();
+		
+		myCapacite.setId(1);
+		
+		myCapacite.setAttaque(attaque);
+		myCapacite.setDefense(defense);
+		myCapacite.setEsquive(esquive);
+		myCapacite.setVitesse(vitesse);
+		myCapacite.setPointsdevie(pointsdevie);
+		
+		myItem.setCapacite(myCapacite);
+		
+		daoItem.save(myItem);
 				
 		return "redirect:/listitems";
-	
-		}
+				}	
+				}
 
 
 	// EFFACER ITEM
@@ -107,14 +121,14 @@ public class ItemController {
 
 	daoItem.deleteById(id);
 			
-	return "redirect:/espaceAdmin";
+	return "redirect:/listitems";
 		
-}
+
 	
 
 }
 
 
 
-
+}
 
