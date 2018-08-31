@@ -42,16 +42,17 @@ public class AppConfig {
 		return properties;
 		}
 	
-	@Bean("dataSource")
+	@Bean
 	public BasicDataSource dataSource() {
-	BasicDataSource dataSource = new BasicDataSource();
-	dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	dataSource.setUrl(env.getProperty("sql.url"));
-	dataSource.setUsername(env.getProperty("sql.username"));
-	dataSource.setPassword(env.getProperty("sql.password"));
-	dataSource.setMaxTotal(env.getProperty("sql.maxActive", Integer.class));
-	return dataSource;
+	    BasicDataSource dataSource = new BasicDataSource();
+	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	    dataSource.setUrl(env.getProperty("sql.url"));
+	    dataSource.setUsername(env.getProperty("sql.username"));
+	    dataSource.setPassword(env.getProperty("sql.password"));
+	    dataSource.setMaxTotal(env.getProperty("sql.maxTotal", Integer.class));
+	    return dataSource;
 	}
+
 	
 	
 	@Bean
