@@ -31,9 +31,11 @@ private float prix;
 
 
 	
+
 public float getPrix() {
 	return prix;
 }
+public void setPrix(float prix) {
 	this.prix = prix;
 }
 public void setCapacite(String capacite) {

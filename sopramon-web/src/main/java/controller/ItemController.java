@@ -60,8 +60,6 @@ public class ItemController {
 		
 		myCapacite.setId(1);
 	
-	
-		
 		myCapacite.setAttaque(attaque);
 		myCapacite.setDefense(defense);
 		myCapacite.setEsquive(esquive);
@@ -76,7 +74,6 @@ public class ItemController {
 				
 		return "redirect:/listitems";
 			
-		
 		}
 	
 	// MODIFIER ITEM
