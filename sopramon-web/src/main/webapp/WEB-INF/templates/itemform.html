@@ -13,8 +13,6 @@
 </head>
 <body>
 
-
-
 	<div class="container"> </div> 
 	<h1>AJOUTER / EDITER UN ITEM</h1>
 
@@ -32,54 +30,54 @@
 			<div class="col-sm-10">
 				<input name="prix" th:value="${ item?.prix }" placeholder="Prix de l'item">
 				<div></div>
-
-		<div>
-			<label for="inputCapacite" class="col-sm-2 col-form-label">Capacité de l'item</label>
+	
+				<div>
+			<label for="inputAttaque" class="col-sm-2 col-form-label">Attaque de l'item</label>
 			<div class="col-sm-10">
-				<input name="nom" th:value="${ item?.capacite }" placeholder="Capacité de l'item">
+				<input name="attaque" th:value="${ capacite?.attaque }" placeholder="Attaque de l'item">
 			</div>
-		</div>
+			
+				<div>
+			<label for="inputPointsDeVie" class="col-sm-2 col-form-label">Points de vie de l'item</label>
+			<div class="col-sm-10">
+				<input name="pointsdevie" th:value="${ capacite?.pointsdevie }" placeholder="Points de vie de l'item">
+			</div></div>
+			
+				<div>
+			<label for="inputDefense" class="col-sm-2 col-form-label">Défense de l'item</label>
+			<div class="col-sm-10">
+				<input name="defense" th:value="${ capacite?.defense }" placeholder="Defense de l'item">
+			</div>	</div>		
+			
+				<div>
+			<label for="inputEsquive" class="col-sm-2 col-form-label">Esquive de l'item</label>
+			<div class="col-sm-10">
+				<input name="esquive" th:value="${ capacite?.esquive }" placeholder="Esquive de l'item">
+			</div>	</div>
+				
+				<div>
+			<label for="inputVitesse" class="col-sm-2 col-form-label">Vitesse de l'item</label>
+			<div class="col-sm-10">
+				<input name="vitesse" th:value="${ capacite?.vitesse }" placeholder="Vitesse de l'item">
+			</div>  </div>
 		
-		
-		
-
 				<div class="form-group row">
 				<div class="col-sm-10">  
 
-
-   
-
 <div class="w3-container"> 
 
-		<button type="submit" class="btn btn-primary" >Annuler</button>
+		<a href="/sopramon-web/listitems" class="btn btn-danger">Annuler</a>
 
 		<button type="submit" class="btn btn-primary">Ajouter</button>
 		
-  </div>		
-		
-
+						</div>		
 					</div>
-				</div>
+			</div>
 	</form>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
 </html>
-
-
-
-
 
 
 </html>

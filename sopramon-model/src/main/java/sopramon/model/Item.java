@@ -26,12 +26,18 @@ private int id;
 private String nom;
 @Column(name="ITEM_PRIX", nullable=false)
 @Positive
-private int prix;
-public int getPrix() {
+private float prix;
+
+
+
+	
+public float getPrix() {
 	return prix;
 }
-public void setPrix(float prix2) {
 	this.prix = prix;
+}
+public void setCapacite(String capacite) {
+	this.capacite = capacite;
 }
 @Column(name="ITEM_CAPACITE", nullable=false)
 private String capacite;
