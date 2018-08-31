@@ -70,7 +70,7 @@ public void setNom(String nom) {
 public String getCapacite() {
 	return capacite;
 }
-public void setCapacite(String capacite) {
+public void setCapacite(Capacite capacite2) {
 	this.capacite = capacite;
 }
 

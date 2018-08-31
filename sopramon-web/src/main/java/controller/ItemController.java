@@ -27,11 +27,9 @@ public class ItemController {
 	@Autowired 
 	private IDAOItem daoItem;
 	
-	@GetMapping({ "/Espace-sopramon" })
+	@GetMapping({ "/listeritems" })
 	public String listeitem(Model model) {
 	
-	 List<Item> myItems = new ArrayList<Item>();
-	 myItems = daoItem.findAll();
 	 	
 	 model.addAttribute("items", daoItem.findAll());
 	
@@ -71,7 +69,7 @@ public class ItemController {
 
 		return "redirect:/espacAdmin";
 		
-		
+		/*		
 		}
 		
 		// EFFACER ITEM

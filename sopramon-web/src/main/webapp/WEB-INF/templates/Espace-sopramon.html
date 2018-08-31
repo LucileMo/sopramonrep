@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base href="/sopramon/" />
+<base href="/sopramon-web/Espace-sopramon" />
 <meta charset="UTF-8" />
 
 <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -17,7 +17,8 @@
 <body>
 <header>
 <h1> Menu Sopramon </h1>
-</header>     
+</header>  
+   
 <section> 
 
     <div class="combat">
@@ -29,34 +30,53 @@
     <div class="items">
         <h3>Vos items</h3>
     
-    
-<table id="items" class="table">
-            <thead>
-                <tr>
+             
+       	<table>
+			
+	<thead>
+	<tr>
                     <th scope="col">#</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Prix</th>
                     <th scope="col">Capacite</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-    
-                </tr>
             
-            </tbody>
-        </table>
-        
-    			<tr th:each="item : ${ items }"}> 	   
+
+ 
+ 			<tr th:each="item : ${ items }"}> 	   
 			
 					<td>[[${ item.nom }]] 	 </td>  
 
 					<td>[[${ item.prix }]]	</td>
 				
-					<td>[[${ item.capacite }]]	 </td>	    
-        
-<button type="submit" class="btn-listitem"> Lister les items </button>
-</div>
+					<td>[[${ item.capacite }]]	 </td>	
+			
+				<td>
+
+				</td>
+				
+			</tr>
+      
+     
+			
+				</tbody>
+    </table>
+ 
+					
+		</body>
+ 
+ 
+ 
+
+ 				    <a th:href="@{listeritems class="btn btn-primary">Lister les items</a>	
+ 				      
+					<a th:href="@{listitemsid=${ item.id })}" class="btn btn-primary">Lister les items</a>	
+						
+
+									
+ 
+ 
 </section>
 <footer>Copyright Sopramon &copy; &reg;</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
