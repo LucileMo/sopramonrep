@@ -27,9 +27,16 @@ public class ItemController {
 	@Autowired 
 	private IDAOItem daoItem;
 	
-	@GetMapping({ "/listeritems" })
-	public String listeitem(Model model) {
+	@GetMapping({ "/Espace-sopramon" })
+	public String EspaceSopramon() {
+	 	
+	 return "Espace-sopramon";
 	
+	}
+	
+	
+	@GetMapping({ "/listitems" })
+	public String listeitem(Model model) {
 	 	
 	 model.addAttribute("items", daoItem.findAll());
 	
@@ -37,16 +44,14 @@ public class ItemController {
 	
 	}
 	
-/*
+
 	// AJOUTER ITEM
 	
 	// Partie 1 GET POUR RECUPERER FORMULAIRE
-	// (@RequestParam(value="id", required=true, defaultValue="1") int id, Model model)
+	//	(@RequestParam(value="id", required=true, defaultValue="1") int id, Model model)
 	
 		@GetMapping({ "/additem" })
 		public String addItem (Model model) {
-	
-		model.addAttribute("items", daoItem.findAll());
 	
 		return "itemform";
 
@@ -56,7 +61,7 @@ public class ItemController {
 		
 		
 		@PostMapping({ "/additem" })
-		public String addProduit(@RequestParam String nom, @RequestParam float prix, @RequestParam Capacite capacite) {
+		public String addItem(@RequestParam String nom, @RequestParam float prix, @RequestParam Capacite capacite) {
 		
 		Item myItem = new Item();
 			
@@ -67,7 +72,7 @@ public class ItemController {
 		daoItem.save(myItem);
 				
 
-		return "redirect:/espacAdmin";
+		return "redirect:/Espace-admin";
 		
 		/*		
 		}
@@ -113,4 +118,4 @@ public class ItemController {
 */		
 }
 
-
+}

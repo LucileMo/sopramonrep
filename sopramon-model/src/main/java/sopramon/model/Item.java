@@ -30,8 +30,8 @@ private int prix;
 public int getPrix() {
 	return prix;
 }
-public void setPrix(int prix) {
-	this.prix = prix;
+public void setPrix(float prix2) {
+	this.prix = prix2;
 }
 @Column(name="ITEM_CAPACITE", nullable=false)
 private String capacite;
