@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<base href="/sopramon-web/itemform" />
+<title>Formulaire Item</title>
+
+		<link rel="stylesheet"
+		    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		    crossorigin="anonymous"
+		    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+
+
+	<div class="container"> </div> 
+	<h1>AJOUTER / EDITER UN ITEM</h1>
+
+	<form method="post">
+
+		<div>
+			<label for="inputNom" class="col-sm-2 col-form-label">Nom de l'item</label>
+			<div class="col-sm-10">
+				<input name="nom" th:value="${ item?.nom }" placeholder="Nom de l'item">
+			</div>
+		</div>
+
+		<div>
+			<label for="inputPrix" class="col-sm-2 col-form-label">Prix de l'item</label>
+			<div class="col-sm-10">
+				<input name="prix" th:value="${ item?.prix }" placeholder="Prix de l'item">
+				<div></div>
+
+		<div>
+			<label for="inputCapacite" class="col-sm-2 col-form-label">Capacité de l'item</label>
+			<div class="col-sm-10">
+				<input name="nom" th:value="${ item?.capacite }" placeholder="Capacité de l'item">
+			</div>
+		</div>
+		
+		
+		
+
+				<div class="form-group row">
+				<div class="col-sm-10">  
+
+
+   
+
+<div class="w3-container"> 
+
+		<button type="submit" class="btn btn-primary" >Annuler</button>
+
+		<button type="submit" class="btn btn-primary">Ajouter</button>
+		
+  </div>		
+		
+
+					</div>
+				</div>
+	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+</html>
