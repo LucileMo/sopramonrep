@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url("pictures/fond3.jpg");
+    background-image: url("WEB-INF/pictures/fond3.jpg");
     background-size : cover;
     background-repeat : no-repeat;
     background-position : absolute;
