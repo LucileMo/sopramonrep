@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorator="layout-sopramon.html">
 <head>
 <meta charset="UTF-8" />
 
@@ -17,7 +19,7 @@
 </head>
 <body>
     <header>
-        <h1>Espace Connexion</h1>
+        <h1 layout:fragment="custom-title">Espace Connexion</h1>
     </header>
     <p th:text="${ msgerr }"></p>
     <section>

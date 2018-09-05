@@ -2,17 +2,17 @@
 
 
 body {
-    background-image: url("pictures/fond3.jpg");
+    background-image: url("../pictures/fond3.jpg");
     background-size : cover;
     background-repeat : no-repeat;
     background-position : absolute;
 }
 .sopra
 {
-	background-image:url("pictures/INSERT.png");
+	background-image:url("../pictures/INSERT.png");
 position : absolute;
-top : 20px;
-	left: 90px;
+top : 600px;
+	left: 250px;
 	width: 10px;
 	height: 10px;
 
@@ -20,7 +20,7 @@ top : 20px;
 
 .image-donjon
 {
-background-image:url("pictures/donjon.png");
+background-image:url("../pictures/donjon.png");
 position : absolute;
 top : -10px;
 	left: 700px;
@@ -61,7 +61,7 @@ button, form{
 	position : absolute;
 	left : 500px;
 	top : 200px;
-}
+}"src/main/webapp/WEB-INF/templates/CSS/stylesheet-sopra.css"
 
 footer{
 	position:absolute;
