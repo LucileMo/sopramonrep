@@ -7,9 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-import sopramon.IDAO.IDAOCombat;
-import sopramon.IDAO.IDAOCoup;
+import sopramon.dao.IDAOCombat;
+import sopramon.dao.IDAOCoup;
 
 
 @Controller

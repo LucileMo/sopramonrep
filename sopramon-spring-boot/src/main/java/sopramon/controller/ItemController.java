@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import sopramon.IDAO.IDAOCombat;
-import sopramon.IDAO.IDAOItem;
+import sopramon.dao.IDAOCombat;
+import sopramon.dao.IDAOItem;
 import sopramon.model.Capacite;
 import sopramon.model.Combat;
 import sopramon.model.Item;

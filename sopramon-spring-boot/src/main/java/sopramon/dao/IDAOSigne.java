@@ -1,24 +1,23 @@
-package sopramon.IDAO;
+package sopramon.dao;
 
 import java.util.List;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+
+import sopramon.model.Combat;
 import sopramon.model.Item;
+import sopramon.model.Signe;
 import sopramon.model.Utilisateur;
 
-public interface IDAOUtilisateur extends JpaRepository<Utilisateur, Integer>{
 
+public interface IDAOSigne extends JpaRepository<Signe, Integer> {
 	
-	
-	public Utilisateur save(Utilisateur entity);
-	
-	public Utilisateur findByUsername(String username);
-	
-	
-	
+	public Signe save(Signe entity);
 	
 	
 }
+

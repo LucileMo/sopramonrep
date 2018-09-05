@@ -1,4 +1,4 @@
-package sopramon.IDAO;
+package sopramon.dao;
 
 import java.util.List;
 import java.util.Optional;

@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import sopramon.IDAO.IDAOSopramon;
-import sopramon.IDAO.IDAOUtilisateur;
+import sopramon.dao.IDAOSopramon;
+import sopramon.dao.IDAOUtilisateur;
 import sopramon.model.Sopramon;
-import sopramon.model.Utilisateur;
+
 
 @Controller
 public class AccountController {
