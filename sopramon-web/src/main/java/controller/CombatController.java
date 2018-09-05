@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOCoup;
+import sopramon.IDAO.IDAOItem;
 import sopramon.model.Combat;
 import sopramon.model.Coup;
 
@@ -29,15 +30,14 @@ public class CombatController {
 	
 	@GetMapping({ "/Combat" })
 	public String listecombat(Model model) {
-	
-	 List<Combat> myCombats = new ArrayList<Combat>();
-	 myCombats = daoCombat.findAll();
-	 	
-	 model.addAttribute("combats", daoCombat.findAll());
+		 	
+	model.addAttribute("combats", daoCombat.findAll());
 	
 	return "Combat";
+
 	
 	}
+
 
 	// HISTORIQUE DES COUPS
 	
@@ -47,12 +47,9 @@ public class CombatController {
 	@GetMapping({ "/coup" })
 	public String listecoup(Model model) {
 	
-	 List<Coup> myCoups = new ArrayList<Coup>();
-	 myCoups = daoCoup.findAll();
-	 	
 	 model.addAttribute("coups", daoCoup.findAll());
 	
-	 return "coup";
+	 return "Coup";
 	
 	}
 	
