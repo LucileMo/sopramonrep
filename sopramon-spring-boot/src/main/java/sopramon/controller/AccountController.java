@@ -18,12 +18,7 @@ import sopramon.model.Sopramon;
 @Controller
 public class AccountController {
 	
-	
-	
-	
-	
-	
-	
+
 	@GetMapping("/Connexion")
 	public String login() {
 		
@@ -44,7 +39,6 @@ public class AccountController {
 	}
 	
 	
-
 	@GetMapping(value="/Inscription")
 	public String inscript() {
 		return "Inscription";

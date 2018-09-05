@@ -69,13 +69,15 @@ layout:decorator="layout-sopramon.html">
 
 <div class="w3-container"> 
 
-		<a href="/sopramon-web/listitems" class="btn btn-danger">Annuler</a>
+		<a href="/listitems" class="btn btn-danger">Annuler</a>
 
 		<button type="submit" class="btn btn-primary">Ajouter</button>
 	
 						</div>		
 					</div>
 			</div>
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
 	</form>
 
 
