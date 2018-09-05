@@ -12,12 +12,18 @@ layout:decorator="layout-sopramon.html">
 </head>
 <body>
 <header><h1 layout:fragment="custom-title">Bienvenue dans le Sopraworld !</h1>
-
-
-<div class="centre"><h2><a href="Connexion">Connectez-vous</a></h2>
-<h2><a href="Inscription">Inscrivez-vous</a></h2></div>
-
-<div class="sopra"><img src="pictures/INSERT.png"/></div>
 </header>
+
+<div class="centre" >
+<h2 layout:fragment="custom-subtitle">
+<a href="Connexion">Connectez-vous</a>
+<br/>
+<br/>
+<a href="Inscription">Inscrivez-vous</a>
+</h2>
+</div>
+
+<div class="sopra" layout:fragment="custom-content"><img src="pictures/INSERT.png"/></div>
+
 </body>
 </html>
