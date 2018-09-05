@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorator="layout-sopramon.html">
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<meta name="viewport" content="width=devide-width, initial-scale=1" />
+
+<meta name="description" content="Affrontez les tous !"/>
+
+</head>
+<body>
+<header><h1 layout:fragment="custom-title">Bienvenue dans le Sopraworld !</h1>
+</header>
+
+<div class="centre" >
+<h2 layout:fragment="custom-subtitle">
+<a href="Connexion">Connectez-vous</a>
+<br/>
+<br/>
+<a href="Inscription">Inscrivez-vous</a>
+</h2>
+</div>
+
+<div class="sopra" layout:fragment="custom-content"><img src="pictures/INSERT.png"/></div>
+
+</body>
+</html>
