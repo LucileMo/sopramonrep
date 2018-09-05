@@ -24,7 +24,8 @@ layout:decorator="layout-sopramon.html">
     </header>
     <p th:text="${ msgerr }"></p>
     <section>
-       <form class="centre" method="POST">
+    
+      <!--  <form class="centre" method="POST">
             <div>
                 <label for="exampleInputUsername">Username</label> 
                 <input
@@ -39,7 +40,21 @@ layout:decorator="layout-sopramon.html">
                 
                 <button type="submit" class="btn btn-primary" >Se connecter</button>
                
-        </form>
+        </form> -->
+        <div layout:fragment="custom-content">
+        <form method="POST" action="perform_login">
+<label for="exampleInputUsername">Username</label> 
+    <input type="username" class="form-control" id="exampleInputUsername" th:name="username">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+               
+               <label for="exampleInputPassword">Password</label> 
+    <input type="password" class="form-control" id="exampleInputPassword1" th:name="password">
+                    
+                   
+                
+                <button type="submit" class="btn btn-outline-dark">Se connecter</button>
+               
+                </form></div>
     </section>
     <footer>Copyright Sopramon &copy; &reg;</footer>
    
