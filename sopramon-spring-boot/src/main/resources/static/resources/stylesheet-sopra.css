@@ -1,0 +1,81 @@
+@charset "ISO-8859-1";
+
+
+body {
+    background-image: url("../pictures/fond3.jpg");
+    background-size : cover;
+    background-repeat : no-repeat;
+    background-position : absolute;
+}
+.sopra
+{
+	background-image:url("../pictures/INSERT.png");
+position : absolute;
+top : 600px;
+	left: 250px;
+	width: 10px;
+	height: 10px;
+
+}
+
+.image-donjon
+{
+background-image:url("../pictures/donjon.png");
+position : absolute;
+top : -10px;
+	left: 700px;
+	width: 10px;
+	height: 10px;
+}
+
+.image-arene
+{
+background-image:url(pictures/arene.png);
+position : absolute;
+top : 500px;
+	left: 140px;
+	width: 10px;
+	height: 10px;
+}
+.image-arene-effet
+{
+background-image:url(pictures/arene_effet.png);
+position : absolute;
+top : 500px;
+	left: 140px;
+	width: 10px;
+	height: 10px;
+}
+
+h1, a, h2, h3, th, footer{
+	
+	font-family : 'Orbitron', sans-serif;
+	color : white;
+} 
+button, form{
+	font-family : 'Orbitron', sans-serif;
+}
+
+.centre{
+	width : 250px;
+	position : absolute;
+	left : 500px;
+	top : 200px;
+}"src/main/webapp/WEB-INF/templates/CSS/stylesheet-sopra.css"
+
+footer{
+	position:absolute;
+bottom:0px;
+}
+.combat{
+	position : absolute;
+	left : 50px;
+	top : 100px;
+}
+
+.items{
+	width : 500px;
+	position : absolute;
+	left : 800px;
+	top : 50px;
+}
