@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import sopramon.model.Combat;
 import sopramon.model.Item;
 
 @Controller
+@Secured({"ROLE_ADMIN"})
 public class ItemController {
 
 	
@@ -27,7 +29,7 @@ public class ItemController {
 		@Autowired 
 		private IDAOItem daoItem;
 	
-		
+		@Secured({"ROLE_ADMIN, ROLE_USER"})
 		@GetMapping({ "/listitems" })
 		 
 		 public String listeitem(Model model) {
