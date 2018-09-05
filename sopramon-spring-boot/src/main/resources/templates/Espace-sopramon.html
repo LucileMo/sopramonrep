@@ -8,7 +8,7 @@ layout:decorator="layout-sopramon.html">
 	
 		<meta charset="UTF-8" />
 		
-		<base href="/sopramon-web/" />
+		
 		
 		<title>Bienvenue Sopramon !</title>
 		
@@ -23,7 +23,7 @@ layout:decorator="layout-sopramon.html">
 	<body>
 	
 <header>
-<h1> Menu Sopramon </h1>
+<h1 layout:fragment="custom-title"> Menu Sopramon </h1>
 </header>  
    
 <section> 
@@ -39,7 +39,7 @@ layout:decorator="layout-sopramon.html">
      
     	<li><a href="/sopramon-web/additems">Ajouter un item</a></li>
     	
-    	 
+    	<div layout:fragment="custom-content">
         <h3>Vos items</h3>
     
              
@@ -84,8 +84,9 @@ layout:decorator="layout-sopramon.html">
  
 			</div>
  
- 
+ </div>
 </section>
+
 <footer>Copyright Sopramon &copy; &reg;</footer>
 
         
