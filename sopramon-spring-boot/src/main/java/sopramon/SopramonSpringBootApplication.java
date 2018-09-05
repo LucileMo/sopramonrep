@@ -7,9 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"sopramon" })
-@EnableJpaRepositories("dao")
-@EntityScan("sopramon.model")
 public class SopramonSpringBootApplication {
 
 	public static void main(String[] args) {
