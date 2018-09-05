@@ -34,7 +34,7 @@ public class AccountController {
 	@PostMapping("/Connexion")
 	public String check(@RequestParam String username, @RequestParam String password, Model model) {
 		
-	if(daoUtilisateur.findByUsernameAndPassword(username, password) == null){
+	if(daoUtilisateur.findByUsername(username) == null){
 		
 		model.addAttribute("msgerr","Username ou Password erron�(s)");
         return "redirect:/Connexion";
