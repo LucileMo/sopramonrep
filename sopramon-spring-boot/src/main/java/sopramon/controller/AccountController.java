@@ -1,6 +1,7 @@
 package sopramon.controller;
 import java.util.Date;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
@@ -18,11 +19,9 @@ import sopramon.model.Sopramon;
 public class AccountController {
 	
 	
-	@Autowired
-	private IDAOUtilisateur daoUtilisateur;
 	
-	@Autowired
-	private IDAOSopramon daoSopramon;
+	
+	
 	
 	
 	@GetMapping("/Connexion")
@@ -30,7 +29,8 @@ public class AccountController {
 		
 	return "Connexion";
 	}
-	
+	@Autowired
+	private IDAOUtilisateur daoUtilisateur;
 	@PostMapping("/Connexion")
 	public String check(@RequestParam String username, @RequestParam String password, Model model) {
 		
@@ -49,6 +49,8 @@ public class AccountController {
 	public String inscript() {
 		return "Inscription";
 	}
+	@Autowired
+	private IDAOSopramon daoSopramon;
 	@PostMapping({"/Inscription"})
 	public String addUtil(@RequestParam String pseudo, @RequestParam String nom, @RequestParam String prenom, @RequestParam String username, @RequestParam String password, @DateTimeFormat(pattern="yyyy-MM-dd") @RequestParam Date date) {
 		
