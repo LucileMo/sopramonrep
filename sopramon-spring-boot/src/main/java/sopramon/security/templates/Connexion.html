@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorator="layout-sopramon.html">
+<head>
+<meta charset="UTF-8" />
+
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet-sopra.css" />
+<title>Bienvenue sur la connexion !</title>
+</head>
+<body>
+    <header>
+        <h1 layout:fragment="custom-title">Espace Connexion</h1>
+    </header>
+    <p th:text="${ msgerr }"></p>
+    <section>
+       <form class="centre" method="POST">
+            <div>
+                <label for="exampleInputUsername">Username</label> 
+                <input
+                    type="username" name="username" class="form-control" id="username"
+                     placeholder="Entrez votre username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label> 
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Entrez votre Password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" >Se connecter</button>
+               
+        </form>
+    </section>
+    <footer>Copyright Sopramon &copy; &reg;</footer>
+   
+</body>
+</html>
