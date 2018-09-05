@@ -70,6 +70,13 @@ public void setPassword(String password) {
 	this.password = password;
 }
 
+@Column(name="UTI_IS_ADMIN")
+private boolean admin;
+
+public boolean isAdmin() {
+	return admin;
+}
+
 
 
 }
