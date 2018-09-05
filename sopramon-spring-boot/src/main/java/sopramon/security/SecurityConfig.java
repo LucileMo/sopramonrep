@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/**").hasAnyRole("ADMIN", "USER")
 		.and()
 		.formLogin()
-		.loginPage("/login")
+		.loginPage("/Connexion")
 		.loginProcessingUrl("/perform_login")
 		.defaultSuccessUrl("/home", true)
 		.failureUrl("/login?error=true")
