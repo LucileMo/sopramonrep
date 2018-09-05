@@ -30,7 +30,7 @@ public class ItemController {
 		private IDAOItem daoItem;
 	
 		@Secured({"ROLE_ADMIN, ROLE_USER"})
-		@GetMapping({ "/listitems" })
+		@GetMapping({ "/Espace-sopramon" })
 		 
 		 public String listeitem(Model model) {
 		 	
