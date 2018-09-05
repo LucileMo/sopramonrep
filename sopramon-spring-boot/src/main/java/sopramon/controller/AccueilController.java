@@ -13,10 +13,5 @@ public class AccueilController {
 		model.addAttribute("utilisateur", username);
 		return "Accueil";
 	}
-<<<<<<< Updated upstream
-	
-	
-=======
->>>>>>> Stashed changes
 
 }
