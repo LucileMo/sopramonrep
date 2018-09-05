@@ -9,7 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import fr.formation.model.Utilisateur;
+import sopramon.model.Utilisateur;
 
 public class UtilisateurPrincipal implements UserDetails {
 	private Utilisateur utilisateur;
