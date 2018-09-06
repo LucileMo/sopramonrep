@@ -47,21 +47,19 @@ top : 500px;
 	height: 10px;
 }
 
-h1, a, h2, h3, th, footer{
+h1, h2, h3, th, footer, button, form{
 	
 	font-family : 'Orbitron', sans-serif;
 	color : white;
 } 
-button, form{
-	font-family : 'Orbitron', sans-serif;
-}
+
 
 .centre{
 	width : 250px;
 	position : absolute;
 	left : 500px;
 	top : 200px;
-}"src/main/webapp/WEB-INF/templates/CSS/stylesheet-sopra.css"
+}"src/main/resources/static/resources/stylesheet-sopra.css"
 
 footer{
 	position:absolute;
