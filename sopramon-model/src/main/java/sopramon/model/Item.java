@@ -28,10 +28,6 @@ private String nom;
 @Positive
 private float prix;
 
-
-
-	
-
 public float getPrix() {
 	return prix;
 }

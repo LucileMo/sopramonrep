@@ -1,83 +1,111 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
-layout:decorator="layout-sopramon.html">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	layout:decorator="layout-sopramon.html">
 <head>
 <meta charset="ISO-8859-1">
 <base href="/sopramon-web/itemform" />
 <title>Formulaire Item</title>
 
-		<link rel="stylesheet"
-		    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-		    crossorigin="anonymous"
-		    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 
 </head>
 <body>
 
-	<div class="container"> </div> 
+	<div class="container"></div>
 	<h1>AJOUTER / EDITER UN ITEM</h1>
 
 	<form method="post">
 
 		<div>
-			<label for="inputNom" class="col-sm-2 col-form-label">Nom de l'item</label>
+			<label for="inputNom" class="col-sm-2 col-form-label">Nom de
+				l'item</label>
 			<div class="col-sm-10">
-				<input name="nom" th:value="${ item?.nom }" placeholder="Nom de l'item">
+				<input name="nom" th:value="${ item?.nom }"
+					placeholder="Nom de l'item">
 			</div>
 		</div>
 
 		<div>
-			<label for="inputPrix" class="col-sm-2 col-form-label">Prix de l'item</label>
+			<label for="inputPrix" class="col-sm-2 col-form-label">Prix
+				de l'item</label>
 			<div class="col-sm-10">
-				<input name="prix" th:value="${ item?.prix }" placeholder="Prix de l'item">
+				<input name="prix" th:value="${ item?.prix }"
+					placeholder="Prix de l'item">
 				<div></div>
-	
-				<div>
-			<label for="inputAttaque" class="col-sm-2 col-form-label">Attaque de l'item</label>
-			<div class="col-sm-10">
-				<input name="attaque" th:value="${ capacite?.attaque }" placeholder="Attaque de l'item">
-			</div>
-			
-				<div>
-			<label for="inputPointsDeVie" class="col-sm-2 col-form-label">Points de vie de l'item</label>
-			<div class="col-sm-10">
-				<input name="pointsdevie" th:value="${ capacite?.pointsdevie }" placeholder="Points de vie de l'item">
-			</div></div>
-			
-				<div>
-			<label for="inputDefense" class="col-sm-2 col-form-label">Défense de l'item</label>
-			<div class="col-sm-10">
-				<input name="defense" th:value="${ capacite?.defense }" placeholder="Defense de l'item">
-			</div>	</div>		
-			
-				<div>
-			<label for="inputEsquive" class="col-sm-2 col-form-label">Esquive de l'item</label>
-			<div class="col-sm-10">
-				<input name="esquive" th:value="${ capacite?.esquive }" placeholder="Esquive de l'item">
-			</div>	</div>
-				
-				<div>
-			<label for="inputVitesse" class="col-sm-2 col-form-label">Vitesse de l'item</label>
-			<div class="col-sm-10">
-				<input name="vitesse" th:value="${ capacite?.vitesse }" placeholder="Vitesse de l'item">
-			</div>  </div>
-		
-				<div class="form-group row">
-				<div class="col-sm-10">  
 
-<div class="w3-container"> 
-
-		<a href="/listitems" class="btn btn-danger">Annuler</a>
-
-		<button type="submit" class="btn btn-primary">Ajouter</button>
-	
-						</div>		
+				<div>
+					<label for="inputAttaque" class="col-sm-2 col-form-label">Attaque
+						de l'item</label>
+					<div class="col-sm-10">
+						<input name="attaque" th:value="${ capacite?.attaque }"
+							placeholder="Attaque de l'item">
 					</div>
-			</div>
-<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 
+					<div>
+						<label for="inputPointsDeVie" class="col-sm-2 col-form-label">Points
+							de vie de l'item</label>
+						<div class="col-sm-10">
+							<input name="pointsdevie" th:value="${ capacite?.pointsdevie }"
+								placeholder="Points de vie de l'item">
+						</div>
+					</div>
+
+					<div>
+						<label for="inputDefense" class="col-sm-2 col-form-label">Défense
+							de l'item</label>
+						<div class="col-sm-10">
+							<input name="defense" th:value="${ capacite?.defense }"
+								placeholder="Defense de l'item">
+						</div>
+					</div>
+
+					<div>
+						<label for="inputEsquive" class="col-sm-2 col-form-label">Esquive
+							de l'item</label>
+						<div class="col-sm-10">
+							<input name="esquive" th:value="${ capacite?.esquive }"
+								placeholder="Esquive de l'item">
+						</div>
+					</div>
+
+					<div>
+						<label for="inputVitesse" class="col-sm-2 col-form-label">Vitesse
+							de l'item</label>
+						<div class="col-sm-10">
+							<input name="vitesse" th:value="${ capacite?.vitesse }"
+								placeholder="Vitesse de l'item">
+						</div>
+						
+					</div>
+					
+							<div>
+						<label for="inputCapacite" class="col-sm-2 col-form-label">Capacite
+							de l'item</label>
+						<div class="col-sm-10">
+							<input name="capacite" th:value="${ capacite?.capacite }"
+								placeholder="Capacite de l'item">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-sm-10">
+
+							<div class="w3-container">
+
+								<a href="/listitems" class="btn btn-danger">Annuler</a>
+
+								<button type="submit" class="btn btn-primary">Ajouter</button>
+
+							</div>
+						</div>
+					</div>
+					<input type="hidden" th:name="${_csrf.parameterName}"
+						th:value="${_csrf.token}" />
 	</form>
 
 

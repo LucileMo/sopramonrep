@@ -55,7 +55,8 @@ public class ItemController {
 								// Partie 2 POST POUR ENVOYER DONNES
 				
 		@PostMapping({ "/additems" })
-		public String addItem(@RequestParam String nom, @RequestParam float prix, @RequestParam int attaque, @RequestParam int pointsdevie, @RequestParam int defense, @RequestParam int esquive, @RequestParam int vitesse) {
+		public String addItem(@RequestParam String nom, @RequestParam float prix, @RequestParam int attaque, @RequestParam int pointsdevie, 
+				@RequestParam int defense, @RequestParam int esquive, @RequestParam int vitesse) {
 		
 		Item myItem = new Item();
 		Capacite myCapacite = new Capacite();	
@@ -81,7 +82,7 @@ public class ItemController {
 	// MODIFIER ITEM
 		
 		@GetMapping({ "/moditems" })
-	
+		
 		public String editerItem(@RequestParam int id, Model model) {
 	
 		model.addAttribute("item",  daoItem.findById(id));
@@ -107,6 +108,8 @@ public class ItemController {
 		myCapacite.setPointsdevie(pointsdevie);
 		
 		myItem.setCapacite(myCapacite);
+		myItem.setNom(nom);
+		myItem.setPrix(prix);
 		
 		daoItem.save(myItem);
 				
