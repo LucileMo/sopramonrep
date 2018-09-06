@@ -2,14 +2,14 @@
 
 
 body {
-    background-image: url("../pictures/fond3.jpg");
+    background-image: url("fond3.jpg");
     background-size : cover;
     background-repeat : no-repeat;
     background-position : absolute;
 }
 .sopra
 {
-	background-image:url("../pictures/INSERT.png");
+	background-image:url("INSERT.png");
 position : absolute;
 top : 600px;
 	left: 250px;
@@ -20,7 +20,7 @@ top : 600px;
 
 .image-donjon
 {
-background-image:url("../pictures/donjon.png");
+background-image:url("donjon.png");
 position : absolute;
 top : -10px;
 	left: 700px;
@@ -30,7 +30,7 @@ top : -10px;
 
 .image-arene
 {
-background-image:url(pictures/arene.png);
+background-image:url("arene.png");
 position : absolute;
 top : 500px;
 	left: 140px;
@@ -39,7 +39,7 @@ top : 500px;
 }
 .image-arene-effet
 {
-background-image:url(pictures/arene_effet.png);
+background-image:url("donjon.png");
 position : absolute;
 top : 500px;
 	left: 140px;
