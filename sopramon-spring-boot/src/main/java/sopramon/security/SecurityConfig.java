@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.formLogin()
 		.loginPage("/Connexion")
 		.loginProcessingUrl("/perform_login")
-		.defaultSuccessUrl("/Espace-sopramon", true)
+		.defaultSuccessUrl("/Redirection", true)
 		.failureUrl("/login?error=true")
 		.permitAll()
 		.and()

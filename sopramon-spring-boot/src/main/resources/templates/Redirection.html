@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+layout:decorator="layout-sopramon.html">
+<head>
+<title>Choix</title>
+</head>
+<body>
+<header><h1 layout:fragment="custom-title">Choisissez votre espace</h1>
+</header>
+
+<div>
+<h2 layout:fragment="custom-subtitle">
+<a href="Espace-sopramon">Espace Sopramon</a>
+<br/>
+<br/>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+<a href="Espace-admin">Espace Administrateur</a>
+</div>
+<br/>
+<br/>
+<a href="Combat">Mode Combat</a>
+</h2>
+</div>
+
+    
+      
+    
+    
+   
+<div class="sopra" layout:fragment="custom-content"><img src="resources/INSERT.png"/></div>
+
+</body>
+</html>

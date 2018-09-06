@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +36,16 @@ public class AccountController {
         return "redirect:/Connexion";
 	}
 	
-	return "redirect:/Espace-sopramon";
+	return "redirect:/Redirection";
+	}
+	
+	
+	@Secured({"ROLE_ADMIN, ROLE_USER"})
+	@GetMapping({ "/Redirection" })
+	public String choix(Model model) {
+		model.addAttribute("sopramons", daoSopramon.findAll());
+	return "Redirection";
+	
 	}
 	
 	

@@ -12,10 +12,10 @@ layout:decorator="layout-sopramon.html">
 <body>
 
 <h1>Espace Admin</h1>
-  
+
+<div layout:fragment="custom-content">  
 <section> 
 
-    <div layout:fragment="custom-content">
         <h3>Liste des Sopramons</h3>
         <table id="sopramons">
             <thead>
@@ -38,18 +38,11 @@ layout:decorator="layout-sopramon.html">
         
     
     
-    </div>
-    </section>
-    <section> 
-<div layout:fragment="custom-content">
-    <div class="combat">
-        <h3>Mode Combat</h3>
     
-    
-    <button type="button" class="btn btn-danger"><a href="Combat">Go</a></button>
-    </div>
-    <div class="items">
-     
+   
+   
+
+   
      
     	<li><a href="/additems">Ajouter un item</a></li>
     	
@@ -96,8 +89,7 @@ layout:decorator="layout-sopramon.html">
  
 			</div>
  
- </div>
-</section>
+
 
 
 </body>
