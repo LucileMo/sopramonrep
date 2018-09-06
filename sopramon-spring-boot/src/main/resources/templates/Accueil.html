@@ -1,31 +1,38 @@
 <!DOCTYPE html>
+
+
 <html xmlns:th="http://www.thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
-layout:decorator/data-layout-decorate="layout-sopramon.html">
-
+layout:decorator="layout-sopramon.html">
 <head>
+<meta charset="UTF-8" />
 
 <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-<meta name="viewport" content="width=devide-width, initial-scale=1" />
-
-<meta name="description" content="Affrontez les tous !"/>
-
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet-sopra.css" />
+<title>Affrontez les tous ! </title>
 </head>
 <body>
 <header><h1 layout:fragment="custom-title">Bienvenue dans le Sopraworld !</h1>
 </header>
 
-<div class="centre" >
+<div>
 <h2 layout:fragment="custom-subtitle">
 <a href="Connexion">Connectez-vous</a>
 <br/>
 <br/>
 <a href="Inscription">Inscrivez-vous</a>
 </h2>
+
 </div>
 
-<div class="sopra" layout:fragment="custom-content"><img src="pictures/INSERT.png"/></div>
+<div class="sopra" layout:fragment="custom-content"><img src="resources/INSERT.png"/></div>
 
 </body>
 </html>
