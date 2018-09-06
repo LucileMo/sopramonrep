@@ -12,11 +12,6 @@ layout:decorator="layout-sopramon.html">
 		
 		<title>Bienvenue Sopramon !</title>
 		
-    
-		<link rel="stylesheet"
-		    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-		    crossorigin="anonymous"
-		    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 		    	 
 	</head>
 	
@@ -27,19 +22,17 @@ layout:decorator="layout-sopramon.html">
 </header>  
    
 <section> 
-
+<div layout:fragment="custom-content">
     <div class="combat">
         <h3>Mode Combat</h3>
     
     
-    <button type="button" class="btn btn-danger"><a href="/sopramon-web/Combat">Go</a></button>
+    <button type="button" class="btn btn-danger"><a href="Combat">Go</a></button>
     </div>
     <div class="items">
      
-     
-    	<li><a href="/additems">Ajouter un item</a></li>
+   
     	
-    	<div layout:fragment="custom-content">
         <h3>Vos items</h3>
     
              
@@ -63,7 +56,6 @@ layout:decorator="layout-sopramon.html">
 				
 					<td>[[${ item.capacite }]]	 </td>	
 			
-				<td>
 				
 					<a th:href="@{/moditems(id=${ item.id })}" class="btn btn-primary">Modifier</a>	
 					
