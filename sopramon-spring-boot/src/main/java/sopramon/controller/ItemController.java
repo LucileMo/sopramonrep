@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 import sopramon.dao.IDAOCombat;
 import sopramon.dao.IDAOItem;
 import sopramon.model.Capacite;
@@ -40,7 +41,7 @@ public class ItemController {
 		
 		}
 	
-
+			
 	// AJOUTER ITEM
 	
 								// Partie 1 GET POUR RECUPERER FORMULAIRE
