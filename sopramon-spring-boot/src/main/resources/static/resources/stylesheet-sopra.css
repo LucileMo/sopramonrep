@@ -1,6 +1,5 @@
 @charset "ISO-8859-1";
 
-
 body {
     background-image: url("fond3.jpg");
     background-size : cover;
@@ -47,11 +46,31 @@ top : 500px;
 	height: 10px;
 }
 
-h1, h2, h3, th, footer, button, form{
+h1, h2, h3{
 	
 	font-family : 'Orbitron', sans-serif;
 	color : white;
 } 
+
+form, small, input{
+	
+	font-family : 'Orbitron', sans-serif;
+	color : white;
+} 
+
+a, p, label, button{
+	
+	font-family : 'Orbitron', sans-serif;
+	color : white;
+} 
+footer{
+	font-family : 'Orbitron', sans-serif;
+	color : white;
+	position:absolute;
+bottom:0px;
+}
+
+
 
 
 .centre{
@@ -61,10 +80,7 @@ h1, h2, h3, th, footer, button, form{
 	top : 200px;
 }"src/main/resources/static/resources/stylesheet-sopra.css"
 
-footer{
-	position:absolute;
-bottom:0px;
-}
+
 .combat{
 	position : absolute;
 	left : 50px;
