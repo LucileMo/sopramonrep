@@ -5,30 +5,16 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 layout:decorator="layout-sopramon.html">
 <head>
 
-<meta charset="UTF-8" />
 
-<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-<meta name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 
 <title>Bienvenue Admin !</title>
 </head>
 <body>
-<header>
+
 <h1>Espace Admin</h1>
-</header>     
+  
 <section> 
-<nav>     
-                <ul>
-            <li><a href="Connexion.html">Espace Connexion</a></li>
-            <li><a href="Espace-admin.html">Espace Admin</a></li>
-            <li><a href="Espace-sopramon.html">Espace Sopramon</a></li>
-                </ul>
-</nav>
+
     <div layout:fragment="custom-content">
         <h3>Liste des Sopramons</h3>
         <table id="sopramons">
@@ -54,6 +40,64 @@ layout:decorator="layout-sopramon.html">
     
     </div>
     </section>
+    <section> 
+<div layout:fragment="custom-content">
+    <div class="combat">
+        <h3>Mode Combat</h3>
+    
+    
+    <button type="button" class="btn btn-danger"><a href="Combat">Go</a></button>
+    </div>
+    <div class="items">
+     
+     
+    	<li><a href="/additems">Ajouter un item</a></li>
+    	
+    	
+        <h3>Vos items</h3>
+    
+             
+       	<table>
+			
+	<thead>
+	<tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Capacite</th>
+                </tr>
+            </thead>	
+ 
+ 			<tr th:each="item : ${ items }"}> 	   
+			
+					<td>[[${ item.nom }]] 	 </td>  
+
+					<td>[[${ item.prix }]]	</td>
+				
+					<td>[[${ item.capacite }]]	 </td>	
+			
+				<td>
+				
+	
+					<a th:href="@{/moditems(id=${ item.id })}" class="btn btn-primary">Modifier</a>	
+					
+					<a th:href="@{/deleteitems(id=${ item.id })}" class="btn btn-danger">Supprimer</a>	
+    
+
+    
+    
+				</td>
+				
+			</tr>
+      
+     
+			
+				</tbody>
+    </table>
+ 
+			</div>
+ 
+ </div>
+</section>
 
 
 </body>
