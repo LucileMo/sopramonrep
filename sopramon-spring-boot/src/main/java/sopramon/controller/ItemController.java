@@ -51,7 +51,7 @@ public class ItemController {
 		return "itemform";							//nom de la vue
 		
 		}
-
+		
 								// Partie 2 POST POUR ENVOYER DONNES
 				
 		@PostMapping({ "/additems" })
