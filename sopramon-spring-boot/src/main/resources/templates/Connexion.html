@@ -33,7 +33,7 @@ layout:decorator="layout-sopramon.html">
                
         </form> -->
         <div layout:fragment="custom-content">
-        <form method="POST" action="perform_login">
+        <form class="centre" method="POST" action="perform_login">
 <label for="exampleInputUsername">Username</label> 
     <input type="username" class="form-control" id="exampleInputUsername" th:name="username">
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
