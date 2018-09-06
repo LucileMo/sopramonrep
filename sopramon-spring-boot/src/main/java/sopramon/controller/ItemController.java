@@ -61,7 +61,6 @@ public class ItemController {
 		Item myItem = new Item();
 		Capacite myCapacite = new Capacite();	
 		
-		myCapacite.setId(1);
 	
 		myCapacite.setAttaque(attaque);
 		myCapacite.setDefense(defense);
@@ -75,7 +74,7 @@ public class ItemController {
 		
 		daoItem.save(myItem);
 				
-		return "redirect:/listitems";
+		return "redirect:/Espace-sopramon";
 			
 		}
 	
@@ -93,13 +92,14 @@ public class ItemController {
 
 		@PostMapping({ "/moditems" })
 	
-		public String editerItem(@RequestParam String nom, @RequestParam float prix, @RequestParam int attaque, 
+		public String editerItem(@RequestParam int id, @RequestParam String nom, @RequestParam float prix, @RequestParam int capaciteId, @RequestParam int attaque, 
 				@RequestParam int pointsdevie, @RequestParam int defense, @RequestParam int esquive, @RequestParam int vitesse) {							{
 		
 		Item myItem = new Item();
 		Capacite myCapacite = new Capacite();
 		
-		myCapacite.setId(1);
+		myItem.setId(id);
+		myCapacite.setId(capaciteId);
 		
 		myCapacite.setAttaque(attaque);
 		myCapacite.setDefense(defense);
@@ -113,7 +113,7 @@ public class ItemController {
 		
 		daoItem.save(myItem);
 				
-		return "redirect:/listitems";
+		return "redirect:/Espace-sopramon";
 				}	
 				}
 

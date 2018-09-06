@@ -2,11 +2,14 @@ package sopramon.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Positive;
@@ -31,14 +34,14 @@ private float prix;
 public float getPrix() {
 	return prix;
 }
+
 public void setPrix(float prix) {
 	this.prix = prix;
 }
-public void setCapacite(String capacite) {
-	this.capacite = capacite;
-}
-@Column(name="ITEM_CAPACITE", nullable=false)
-private String capacite;
+
+@ManyToOne(cascade={ CascadeType.PERSIST, CascadeType.MERGE })
+@JoinColumn(name="ITEM_CAPACITE_ID")
+private Capacite capacite;
 @OneToMany(mappedBy="item")
 private List<Achat> achats;
 @Column(name="ITEM_STOCK")
@@ -71,10 +74,11 @@ public void setNom(String nom) {
 	this.nom = nom;
 }
 
-public String getCapacite() {
+
+public Capacite getCapacite() {
 	return capacite;
 }
-public void setCapacite(Capacite capacite2) {
+public void setCapacite(Capacite capacite) {
 	this.capacite = capacite;
 }
 

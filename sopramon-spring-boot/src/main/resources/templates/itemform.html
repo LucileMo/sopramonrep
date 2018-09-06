@@ -20,7 +20,8 @@
 	<h1>AJOUTER / EDITER UN ITEM</h1>
 
 	<form method="post">
-
+		<input name="capaciteId" type="hidden" th:value="${ item?.capacite?.id }" />
+		
 		<div>
 			<label for="inputNom" class="col-sm-2 col-form-label">Nom de
 				l'item</label>
@@ -42,7 +43,7 @@
 					<label for="inputAttaque" class="col-sm-2 col-form-label">Attaque
 						de l'item</label>
 					<div class="col-sm-10">
-						<input name="attaque" th:value="${ capacite?.attaque }"
+						<input name="attaque" th:value="${ item?.capacite?.attaque }"
 							placeholder="Attaque de l'item">
 					</div>
 
@@ -50,7 +51,7 @@
 						<label for="inputPointsDeVie" class="col-sm-2 col-form-label">Points
 							de vie de l'item</label>
 						<div class="col-sm-10">
-							<input name="pointsdevie" th:value="${ capacite?.pointsdevie }"
+							<input name="pointsdevie" th:value="${ item?.capacite?.pointsdevie }"
 								placeholder="Points de vie de l'item">
 						</div>
 					</div>
@@ -59,7 +60,7 @@
 						<label for="inputDefense" class="col-sm-2 col-form-label">Défense
 							de l'item</label>
 						<div class="col-sm-10">
-							<input name="defense" th:value="${ capacite?.defense }"
+							<input name="defense" th:value="${ item?.capacite?.defense }"
 								placeholder="Defense de l'item">
 						</div>
 					</div>
@@ -68,7 +69,7 @@
 						<label for="inputEsquive" class="col-sm-2 col-form-label">Esquive
 							de l'item</label>
 						<div class="col-sm-10">
-							<input name="esquive" th:value="${ capacite?.esquive }"
+							<input name="esquive" th:value="${ item?.capacite?.esquive }"
 								placeholder="Esquive de l'item">
 						</div>
 					</div>
@@ -77,20 +78,12 @@
 						<label for="inputVitesse" class="col-sm-2 col-form-label">Vitesse
 							de l'item</label>
 						<div class="col-sm-10">
-							<input name="vitesse" th:value="${ capacite?.vitesse }"
+							<input name="vitesse" th:value="${ item?.capacite?.vitesse }"
 								placeholder="Vitesse de l'item">
 						</div>
 						
 					</div>
 					
-							<div>
-						<label for="inputCapacite" class="col-sm-2 col-form-label">Capacite
-							de l'item</label>
-						<div class="col-sm-10">
-							<input name="capacite" th:value="${ capacite?.capacite }"
-								placeholder="Capacite de l'item">
-						</div>
-					</div>
 
 					<div class="form-group row">
 						<div class="col-sm-10">

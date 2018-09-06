@@ -18,28 +18,18 @@ public class Capacite {
 	private int id;
 
 	@Column(name = "CAPA_pointsdevie", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
 	private int pointsdevie;
 
 	@Column(name = "CAPA_attaque", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
 	private int attaque;
 
 	@Column(name = "CAPA_defense", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
 	private int defense;
 
 	@Column(name = "CAPA_esquive", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
 	private int esquive;
 
 	@Column(name = "CAPA_vitesse", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
 	private int vitesse;
 
 	public int getId() {
