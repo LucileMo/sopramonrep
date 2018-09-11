@@ -1,10 +1,10 @@
 export class Combat {
 
-    constructor(public id?: int, private date?: string) {
+    constructor(public id?: number, private date?: string) {
 
     }
 
-    public getId(): int {
+    public getId(): number {
         return this.id;
     }
 
