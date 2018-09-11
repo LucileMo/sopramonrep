@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Combat } from './combat';
+import { CombatService } from './combat.service';
 
 
 @Component({
@@ -12,7 +13,6 @@ export class Combat {
     public getId(): int {
       return this.id;
     }
-
     private date: Date;
     public getDate(): Date {
       return this.date;
@@ -21,16 +21,18 @@ export class Combat {
     public getArene(): arene {
       return this.arene;
     }
-
     private type: Type;
     public getType(): type {
       return this.type;
     }
 
-    private combats: Array<Combat> = new Array<Combat>();
 
-    constructor() {
-      this.combats.push(new Combat())
+
+    constructor(private combatService: CombatService) {
+    }
+
+    public getCombats(): Array<Combat> {
+      return this.combatService.findAll();
     }
 
 }
