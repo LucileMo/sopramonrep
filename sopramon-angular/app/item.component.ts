@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Item } from './item';
-import { ItemtService } from './item.service';
+import { ItemService } from './item.service';
 
 
 @Component({
@@ -9,37 +9,29 @@ import { ItemtService } from './item.service';
     styleUrls: [ 'app/item.component.css' ]
 })
 
-export class Item {
-    private id: int;
-    private nom: String;
-      private prix: float;
-        private capacite: capacite;
+export class ItemComponent {
+    private id: number;
+    private nom: string;
+
+      private prix: number;
         private filtre: string = "";
          private isEditing: boolean =false;
+          private items: Array<Item> = new Array<Item>();
 
 
        constructor(private itemService: ItemService) {}
 
-    private items: Array<Item> = new Array<Produit>();
 
-    public addItem() {
-          this.itemService.save(this.item);
-          this.item = new Item();
-          this.isEditing = false;
-      }
 
-      public modifierItem (item: Item) {
-        this.item = item;
-        this.isEditing = true;
-      }
+
+
+
 
       public getItems(): Array<Item>{
         return this.itemService.findAll();
       }
 
-      public supprimerItem (item: Item){
-      this.produitItem.delete(item);
-      }
+
 
 
       public filtrerItems(): Array<Item> {

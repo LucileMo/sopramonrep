@@ -7,7 +7,7 @@ import { RequestOptions } from '@angular/http';
 
 @Injectable()
 export class ItemService {
-private produits: Array<Produit> = new Array<Produit>();
+private items: Array<Item> = new Array<Item>();
 private requestOptions: RequestOptions;
 
 constructor (private http: Http, private appConfigService: AppConfigService){
