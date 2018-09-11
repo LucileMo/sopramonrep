@@ -10,8 +10,8 @@ import { CombatService } from './combat.service';
 })
 export class Combat {
     private combat: Combat = new Combat("Nom du combat", 10);
-    private id: number ="";
-    private date: string ="";
+    private id: number;
+    private date: string;
 //    private arene: Arene ="";
   //  private type: Type = "";
 
