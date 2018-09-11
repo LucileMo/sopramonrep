@@ -29,12 +29,12 @@ export class CombatService  {
     return this.combats;
   }
 
-  public findAllById(id: int): Array<Combat> {
-      return this.combats.sopramon.id.filter(combat =>
-      combat.nom
-        .toLowerCase()
-        .indexOf(nom.toLowerCase()) !== -1
-      );
-  }
+  // public findAllById(id: number): Array<Combat> {
+  //     return this.combats.sopramon.id.filter(combat =>
+  //     combat.id
+  //       .toLowerCase()
+  //       .indexOf(id.toLowerCase()) !== -1
+  //     );
+  // }
 
   }
