@@ -1,0 +1,52 @@
+
+<p [style.color]="couleur">
+    Ma première application Angular ! :-)<br />
+    {{ prenom }}
+</p>
+<input type="text" [(ngModel)]="prenom" />
+<button (click)="changePrenom()">CHANGER</button>
+
+<br />
+Couleur : <input type="color" [(ngModel)]="couleur" />
+<br />
+<select [(ngModel)]="couleur">
+    <option value="#FF0000">Rouge</option>
+    <option value="#FF0080">Rose mignon</option>
+</select>
+<hr />
+
+Nom : <input type="text" [(ngModel)]="produit.nom" />
+<br />
+Prix : <input type="text" [(ngModel)]="produit.prix" />
+
+<button (click)="addProduit()">AJOUTER</button>
+
+<p *ngIf="produit.nom && produit.prix != 0"
+    [class.negatif]="produit.prix < 0">
+    Le produit {{ produit.nom }} est à {{ produit.prix }} euros.
+</p>
+
+<hr />
+
+<p asc-bold>Le contenu à mettre en gras ...</p>
+
+<asc-bold-element
+    prefix="Voilà le produit"
+    [nom]="produit.nom">
+</asc-bold-element>
+
+<hr />
+
+<h1> Liste des Produits </h1>
+
+Filtre : <input type="text" [(ngModel)]="filtre" />
+
+
+<table>
+  <tr *ngFor="let produit of filtrerProduits()">
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.prix }}</td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

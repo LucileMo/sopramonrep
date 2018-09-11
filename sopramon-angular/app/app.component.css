@@ -1,0 +1,7 @@
+p {
+    transition: color 0.5s ease-in;
+}
+
+.negatif {
+    color: red;
+}

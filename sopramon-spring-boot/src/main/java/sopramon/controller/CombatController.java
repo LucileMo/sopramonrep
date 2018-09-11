@@ -16,18 +16,15 @@ import sopramon.dao.IDAOCoup;
 @Controller
 public class CombatController {
 	
-/*	
-	@GetMapping(value="/Combat")
+	
+	@GetMapping(value="/Affichage")
 	public String Accueil(@RequestParam(defaultValue="there") String username, Model model) {
 		model.addAttribute("utilisateur", username);
 		return "Combat";
 	}
 
-*/	
 	// LISTER LES COMBATS
 	
-
- 	
 	@Autowired 
 	private IDAOCombat daoCombat;
 	
