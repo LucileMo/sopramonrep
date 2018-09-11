@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+layout:decorator="layout-sopramon.html">
+
+	<head>
+	
+		<meta charset="UTF-8" />
+		
+		
+		
+		<title>Bienvenue cher client !</title>
+		
+		    	 
+	</head>
+	
+	<body>
+	
+<header>
+<h1 layout:fragment="custom-title">Echoppe</h1>
+</header>  
+   
+   <div layout:fragment="custom-content">
+<section> 
+
+    <div class="items">
+     
+   
+    	
+        <h3>Produits disponibles</h3>
+    
+             
+       	<table>
+			
+	<thead>
+	<tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Capacite</th>
+					
+                    
+                </tr>
+            </thead>	
+ 
+ 			<tr th:each="item : ${ items }"}> 	   
+			
+					<td>[[${ item.nom }]] 	 </td>  
+
+					<td>[[${ item.prix }]]	</td>
+				
+					<td>[[${ item.capacite }]]	 </td>
+					
+					<td><button><button type="submit" class="btn btn-primary" >Acheter</button></button></td>	
+			
+				
+			</tr>
+      
+     
+			
+				</tbody>
+    </table>
+ 
+			</div>
+ </section>
+ </div>
+
+
+<footer>Copyright Sopramon &copy; &reg;</footer>
+
+        
+</body>
+</html>

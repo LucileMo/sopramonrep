@@ -129,11 +129,17 @@ public class ItemController {
 			
 	return "redirect:/listitems";
 		
-
+	}
+	// ACHETER ITEM
 	
+	@GetMapping({ "/shop" })
+	
+	public String acheteritems(@RequestParam int id) {
 
-}
-
+		
+				
+		return "/shop";
+	}
 
 
 }
