@@ -1,85 +1,47 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
-	layout:decorator="layout-sopramon.html">
-
-<head>
-
-<meta charset="UTF-8" />
+import { Component } from '@angular/core';
+import { Produit } from './produit';
 
 
+@Component({
+    selector: 'eshop-app',
+    templateUrl: 'app/produit.component.html',
+    styleUrls: [ 'app/produit.component.css' ]
+})
+export class Item {
+    private id: int;
+    private nom: String;
+    public getNom(): string {
+      return this.nom;
+    }
+    private prix: float;
+    public getPrix(): float {
+      return this.prix;
+    }
 
-<title>Bienvenue Sopramon !</title>
+    private capacite: capacite;
+    public getCapacite(): capacite {
+      return this.capacite;
+    }
 
-
-</head>
-
-<body>
-
-	<header>
-		<h1 layout:fragment="custom-title">Menu Sopramon</h1>
-	</header>
-
-	<section>
-		<div layout:fragment="custom-content">
-			<div class="combat">
-				<h3>Mode Combat</h3>
-
-
-				<button type="button" class="btn btn-danger">
-					<a href="Combat">Go</a>
-				</button>
-			</div>
-			<div class="items">
+    private items: Array<Item> = new Array<Produit>();
 
 
 
-				<h3>Vos items</h3>
+    constructor() {
+      this.items.push(new Item())
+    }
+
+    item.addItem() {
+      this.items.push(this.item);
+      this.item = new Item();     // réinitialise le nouveau produit
+    }
+
+    public filtrerItems(): Array<Item> {
+      return this.items.filter(item => item.getNom()
+        .toLowerCase()
+        .indexOf(this.filtre.toLowerCase()) !== -1
+      )   // pas contenu retourne -1 1position retourne 0 5e position retourne 4
+    }
 
 
-				<table>
-
-					<thead>
-						<tr>
-							<th scope="col">Nom</th>
-							<th scope="col">Prix</th>
-							<th scope="col">Capacite</th>
-							<th sec:authorize="hasRole('ROLE_ADMIN')">Actions</th>
-
-						</tr>
-					</thead>
-
-					<tr th:each="item : ${ items }"}>
-
-						<td>[[${ item.nom }]]</td>
-
-						<td>[[${ item.prix }]]</td>
-
-						<td>[[${ item.capacite }]]</td>
-						<td><a th:href="@{/moditems(id=${ item.id })}"
-							class="btn btn-primary">Modifier</a> <a
-							th:href="@{/deleteitems(id=${ item.id })}" class="btn btn-danger">Supprimer</a>
-
-
-
-
-						</td>
-
-					</tr>
-
-
-
-					</tbody>
-				</table>
-
-			</div>
-
-		</div>
-	</section>
-
-	<footer>Copyright Sopramon &copy; &reg;</footer>
-
-
-</body>
-</html>
+}
