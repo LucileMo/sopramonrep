@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Produit } from './produit';
+import {Combat } from './combat';
 
 
 @Component({
-    selector: 'eshop-app',
-    templateUrl: 'app/produit.component.html',
-    styleUrls: [ 'app/produit.component.css' ]
+    selector: 'sopra-app',
+    templateUrl: 'app/combat.component.html',
+    styleUrls: [ 'app/app.component.css' ]
 })
 export class Combat {
     private id: int;
