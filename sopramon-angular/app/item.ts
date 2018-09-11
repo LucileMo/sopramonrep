@@ -10,4 +10,9 @@ export class Item {
     public getNom(): string {
         return this.nom;
     }
+
+    public getPrix(): number {
+      return this.prix;
+    }
+
 }

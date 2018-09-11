@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AscBoldComponent } from './asc-bold.component';
 import { AscBoldElementComponent } from './asc-bold-element.component';
-import { RouterModule.forRoot(routes) } from '@angular/core';
+import {RouterModule, Routes} from  '@angular/router';
 import { HomeComponent } from './home.component';
-import { ProduitComponent } from './produit.component';
-import { ProduitDetailsComponent } from './produit-details.component';
-import { ProduitCrudRowsComponent } from './produit-crud-row.component';
+import { ItemComponent } from './item.component';
+import { CombatComponent } from './combat.component';
+//import { ItemCrudRowsComponent } from './item-crud-row.component';
 
 
 
@@ -20,9 +20,7 @@ import { ProduitCrudRowsComponent } from './produit-crud-row.component';
 
     declarations: [
         AppComponent,
-        AscBoldComponent,
-        AscBoldElementComponent,
-        ProduitCrudRowsComponent
+      //  ItemCrudRowsComponent
     ],
 
     bootstrap: [ AppComponent ]
@@ -32,7 +30,8 @@ export class AppModule { }
 //Configuration des routes
 const routes: Routes = [
 { path: 'home', component: HomeComponent },
-{ path: 'produit', component: ProduitComponent },
-{ path: 'produit/:id', component: ProduitDetailComponent } ,
+{ path: 'item', component: ItemComponent },
+{ path: 'combat', component: CombatComponent },
+//{ path: 'produit/:id', component: ProduitDetailComponent } ,
 { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
