@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { AscBoldComponent } from './asc-bold.component';
-import { AscBoldElementComponent } from './asc-bold-element.component';
 import {RouterModule, Routes} from  '@angular/router';
 import { HomeComponent } from './home.component';
 import { ItemComponent } from './item.component';

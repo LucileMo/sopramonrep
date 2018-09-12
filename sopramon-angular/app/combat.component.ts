@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Combat } from './combat';
+import { Combat } from './combat';
 import { CombatService } from './combat.service';
 
 
@@ -8,15 +8,16 @@ import { CombatService } from './combat.service';
     templateUrl: 'app/combat.component.html',
     styleUrls: [ 'app/app.component.css' ]
 })
-export class Combat {
-    private combat: Combat = new Combat("Nom du combat", 10);
+export class CombatComponent {
+    private combat: Combat = new Combat();
     private id: number;
     private date: string;
+    private combats: Array<Combat> = new Array<Combat>();
 //    private arene: Arene ="";
   //  private type: Type = "";
 
     constructor(private combatService: CombatService) {
-      this.combats.push(new Combat("1",11092018))
+      this.combats.push(new Combat(1,"11092018"))
           }
 
     public getCombats(): Array<Combat> {
