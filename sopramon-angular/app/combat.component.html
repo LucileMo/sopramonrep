@@ -4,66 +4,6 @@
 
 <head>
 
-<title>Fight !</title>
+<h1> Combat </h1>
 
-
-</head>
-<body>
-
-	<h1 layout:fragment="custom-title">Mode combat</h1>
-
-	<h3 layout:fragment="custom-title"></h3>
-		LISTE DES COMBATS
-		</h1>
-
-
-
-
-		<table>
-
-			<thead>
-				<tr>
-					<th scope="col">Date</th>
-					<th scope="col">Arene</th>
-					<th scope="col">Type</th>
-
-
-				</tr>
-			</thead>
-
-			<tr th:each="combat : ${ combats }"}>
-
-				<td>[[${ combat.date }]]</td>
-
-		<!--		<td>[[${ combat.arene }]]</td>  -->
-
-		<!--			<td>[[${ combat.type }]]</td>	-->
-
-			</tr>
-
-			</tbody>
-		</table>
-
-		<h2 layout:fragment="custom-subtitle">
-			<a href="Donjon.html" class="donjon">Mode histoire</a>
-		</h2>
-
-		<div layout:fragment="custom-content" class="image-donjon">
-			<img src="resources/donjon.png" />
-		</div>
-
-		<h2 layout:fragment="custom-subtitle2">
-			<a href="Arene.html" class="arene">Mode versus</a>
-		</h2>
-
-		<div layout:fragment="custom-content2" class="image-arene">
-			<img src="resources/arene.png" />
-		</div>
-
-		<div class="image-arene-effet">
-			<img src="resources/arene_effet.png" />
-		</div>
-
-		<footer>Copyright Sopra &copy; &reg;</footer>
-</body>
 </html>
