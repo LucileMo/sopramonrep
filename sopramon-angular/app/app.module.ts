@@ -12,6 +12,14 @@ import { ItemService } from './item.service';
 import { CombatService } from './combat.service';
 import { AppConfigService } from './app-config.service';
 
+//Configuration des routes
+const routes: Routes = [
+{ path: 'home', component: HomeComponent },
+{ path: 'item', component: ItemComponent },
+{ path: 'combat', component: CombatComponent },
+//{ path: 'produit/:id', component: ProduitDetailComponent } ,
+{ path: '', redirectTo: 'home', pathMatch: 'full' },
+];
 
 
 
@@ -19,6 +27,7 @@ import { AppConfigService } from './app-config.service';
     imports: [
         BrowserModule,
         FormsModule,
+        RouterModule.forRoot(routes),
         HttpModule
     ],
 
@@ -40,12 +49,3 @@ import { AppConfigService } from './app-config.service';
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-
-//Configuration des routes
-const routes: Routes = [
-{ path: 'home', component: HomeComponent },
-{ path: 'item', component: ItemComponent },
-{ path: 'combat', component: CombatComponent },
-//{ path: 'produit/:id', component: ProduitDetailComponent } ,
-{ path: '', redirectTo: 'home', pathMatch: 'full' },
-];
