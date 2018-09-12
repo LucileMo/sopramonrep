@@ -6,7 +6,7 @@ import { ItemService } from './item.service';
 @Component({
     //selector: 'sopra-app',
     templateUrl: 'app/item.component.html',
-    styleUrls: [ 'app/item.component.css' ]
+    //styleUrls: [ 'app/item.component.css' ]
 })
 
 export class ItemComponent {
