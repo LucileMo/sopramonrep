@@ -7,17 +7,33 @@ import { HomeComponent } from './home.component';
 import { ItemComponent } from './item.component';
 import { CombatComponent } from './combat.component';
 //import { ItemCrudRowsComponent } from './item-crud-row.component';
+import { HttpModule } from '@angular/http';
+import { ItemService } from './item.service';
+import { CombatService } from './combat.service';
+import { AppConfigService } from './app-config.service';
+
 
 
 
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpModule
     ],
+
+    providers: [
+        AppConfigService,
+        ItemService,
+        CombatService
+    ],
+
 
     declarations: [
         AppComponent,
+        ItemComponent,
+        CombatComponent,
+        HomeComponent
       //  ItemCrudRowsComponent
     ],
 
