@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Item} from './item';
+import { Item } from './item';
 import { Http } from '@angular/http';
 import { AppConfigService } from './app-config.service';
 import { Headers } from '@angular/http';
@@ -18,7 +18,7 @@ this.requestOptions = new RequestOptions({ headers: myHeaders });
 
 this.http
 .get(this.appConfigService.getApiUrl() + "items", this.requestOptions)
-.subscribe(resp =>this.items = resp.json()._embedded.produits);
+.subscribe(resp =>this.items = resp.json()._embedded.items);
 }
 
 public save(item : Item) {
@@ -44,7 +44,7 @@ public findAll(): Array<Item>{
 }
 public findAllByNom(nom: string): Array<Item> {
 
-    return this.items.filter(p => p.nom.toLowerCase().indexOf(nom.toLowerCase()) !== -1);
+    return this.items.filter(i => i.nom.toLowerCase().indexOf(nom.toLowerCase()) !== -1);
   }
 // p.nom à remplacer par p.getNom
 

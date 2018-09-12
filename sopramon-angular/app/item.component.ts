@@ -17,13 +17,10 @@ export class ItemComponent {
         private filtre: string = "";
          private isEditing: boolean =false;
           private items: Array<Item> = new Array<Item>();
+          private item: Item = new Item("Saisir le nom", 10);
 
 
        constructor(private itemService: ItemService) {}
-
-
-
-
 
 
 

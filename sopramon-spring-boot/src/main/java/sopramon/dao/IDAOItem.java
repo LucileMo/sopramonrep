@@ -9,12 +9,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import sopramon.model.Coup;
 import sopramon.model.Item;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
-
+@CrossOrigin("*")
 public interface IDAOItem extends JpaRepository<Item, Integer> {
 
 	public List <Item> findByNomContaining(String string);
