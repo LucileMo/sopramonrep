@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+
+<title layout:title-pattern="$LAYOUT_TITLE -$CONTENT_TITLE">Sopramon</title>
+
+<link rel="stylesheet" href="css/stylesheet-sopra.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" cross origin="anonymous">
+</head>
+<body>
+<header>
+</header>
+<h1 layout:fragment="custom-title"></h1>
+<h2 layout:fragment="custom-subtitle"></h2>
+<div layout:fragment="custom-content"></div>
+<footer layout:fragment="custom-footer">Copyright Sopra &copy; &reg;</footer>
+</body>
+</html>
